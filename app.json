@@ -1,5 +1,5 @@
 {
-	"name": "How to stream a Movie in NodeJS",
+	"name": "Stream Movie using NodeJS",
 	"description": "A short article showcasing how to stream a movie to a HTML 5 video tag using NodeJS",
 	"repository": "https://github.com/davidgatti/How-to-Stream-a-Movie-using-NodeJS",
 	"success_url": "/",
