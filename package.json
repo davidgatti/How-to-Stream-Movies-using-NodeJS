@@ -1,0 +1,21 @@
+{
+  "name": "how-to-stream-a-movie-using-nodejs",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "start": "nf start"
+  },
+  "dependencies": {
+    "body-parser": "1.15.1",
+    "express": "4.13.4",
+    "hjs": "0.0.6",
+    "morgan": "1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "foreman": "2.0.0"
+  }
+}

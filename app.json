@@ -1,0 +1,15 @@
+{
+	"name": "How to stream a Movie in NodeJS",
+	"description": "A short article showcasing how to stream a movie to a HTML 5 video tag using NodeJS",
+	"repository": "https://github.com/davidgatti/How-to-Stream-a-Movie-using-NodeJS",
+	"success_url": "/",
+	"env": {
+		"NODE_ENV": {
+			"description": "The environment can be: production, staging or development"
+		},
+		"NPM_CONFIG_PRODUCTION": {
+			"description": "By default Heroku sets this to true, if you are deploying a dev version of the code, set this false.",
+			"value": "true"
+		}
+	}
+}

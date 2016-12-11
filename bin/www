@@ -1,0 +1,152 @@
+#!/usr/bin/env node
+
+let app = require('../app');
+let http = require('http');
+let cluster = require('cluster');
+
+let server;
+
+//
+//	1.	Get port from environment variables, if it is not set, we can use the
+//		default port.
+//
+let port = process.env.PORT || 3000;
+
+//
+//	2.	Assign the port to the app.
+//
+app.set('port', port);
+
+//
+//	3.	Create, meaning spawn multiple instances of the same app to take
+//		advantage of multi-core processors.
+//
+//		IF 		the cluster is the master one, then this is the cluster
+//				that ins control. This means that the master will spawn
+//				children processes, while also listening for crashes.
+//
+//				If a process exits, then we span a new process in it place
+//				so we can make sure that we constantly have X amount of
+//				processes.
+//
+//		ELSE 	The spawned processes on the other hand are those that creates
+//				servers and do the heavy lifting.
+//
+if(cluster.isMaster) {
+
+    //
+    //	1.	Count the machine's CPUs.
+    //
+    let cpuCount = require('os').cpus().length;
+
+	//
+	// 	2.	When on the production server
+	//
+	if(process.env.NODE_ENV === 'production') {
+
+		//
+		//	1.	Get the amount of memory on Heroku. This variable is set
+		//		by Heroku based on the type of account that you have.
+		//
+		let memory = (process.env.MEMORY_AVAILABLE * 1e6);
+
+		//
+		//	2. Get used memory on the system
+		//
+		let memory_used = (process.memoryUsage().rss * 2);
+
+		//
+		//	3.	calculate how many workers can we start to use ale the
+		//		available power of the server.
+		//
+		//		-1 for good measure
+		//
+		cpuCount = (memory / memory_used).toFixed() - 1;
+	}
+
+    //
+    //	3.	Create a worker for each CPU core.
+    //
+    while(cpuCount--)
+    {
+        cluster.fork();
+    }
+
+    //
+    //	4.	Listen for when the process exits because of a crash, and spawn
+    //		a new process in it place.
+    //
+	cluster.on('exit', function (worker) {
+
+		//
+		//	1.	If a worker dies, lets create a new one to replace him
+		//
+		cluster.fork();
+
+		//
+		//	->	Log what happened
+		//
+		console.log('Worker %d died :(', worker.id);
+
+	});
+}
+else
+{
+	//
+	//	1.	Create HTTP server.
+	//
+	server = http.createServer(app);
+
+	//
+	//	2.	Listen on provided port, on all network interfaces.
+	//
+	server.listen(port);
+
+	//
+	//	3.	React to error events
+	//
+	server.on('error', onError);
+
+	//
+	//	4.	listen to incoming requests
+	//
+	server.on('listening', onListening);
+}
+
+//
+//	Event listener for HTTP server "error" event.
+//
+function onError(error)
+{
+	if(error.syscall !== 'listen') {
+		throw error;
+	}
+
+	//
+	//	handle specific listen errors with friendly messages
+	//
+	switch(error.code)
+	{
+		case 'EACCES':
+			console.error("Port %d requires elevated privileges", port);
+			process.exit(1);
+			break;
+		case 'EADDRINUSE':
+			console.error("Port %d is already in use", port);
+			process.exit(1);
+			break;
+		default:
+			throw error;
+	}
+}
+
+//
+//	Event listener for HTTP server "listening" event.
+//
+function onListening() {
+
+	//
+	//	-> display in the console where to look for the server
+	//
+	console.log("Worker %d is listening on port %d", cluster.worker.id, port);
+}

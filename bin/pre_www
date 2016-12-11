@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$NODE_ENV" = "development" ]; then
+  nodemon ./bin/www
+else
+  node ./bin/www
+fi
