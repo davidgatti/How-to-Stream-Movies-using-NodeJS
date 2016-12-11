@@ -10,7 +10,7 @@
 
 	<body>
 		<center>
-			<video src="http://localhost:5000/video" controls></video>
+			<video src="{{base_url}}/video" controls></video>
 		</center>
 	</body>
 
