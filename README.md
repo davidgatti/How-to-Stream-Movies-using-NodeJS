@@ -18,4 +18,4 @@ And this is it. The video tag will keep making request to the provided URL until
 <a href="https://heroku.com/deploy?template=https://github.com/davidgatti/How-to-Stream-Movies-using-NodeJS" target="_blank">
 <img align="left" style="float: left; margin: 0 10px 0 0;" src="https://www.herokucdn.com/deploy/button.svg"></a>
 
-Once you deploy the server on Heroku, you will see the video player in the middle of the page, and you should see the player buffering up with the trailer of Toy Story which is included in this repo.
+Once you deploy the server on Heroku, you will see the video player in the middle of the page, and you should see the player buffering up with the trailer of Toy Story which is included in this repo. Replace the movie with another one, but keep in mind the format of the video which must be compatible with what the video tag in your browser can handle.
