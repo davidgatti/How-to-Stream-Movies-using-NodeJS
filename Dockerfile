@@ -27,7 +27,7 @@ COPY . /home/app
 #
 #	Switch working directory
 #
-WORKDIR /usr/src/app
+WORKDIR /home/app
 
 #
 #	Prepare the app by installing all the dependencies
