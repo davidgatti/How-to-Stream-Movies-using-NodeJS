@@ -1,7 +1,7 @@
 #
 # 	Base Image
 #
-FROM node:7.4.0
+FROM debian:8.6
 
 #
 #	Basic Setup
@@ -13,6 +13,9 @@ MAINTAINER David Gatti
 #
 RUN apt-get update
 RUN apt-get upgrade -y
+RUN apt-get install -y curl
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 #
 #	Create app directory
