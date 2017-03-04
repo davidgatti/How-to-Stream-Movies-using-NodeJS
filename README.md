@@ -32,7 +32,7 @@ This article is not a full implementation of the [HTTP/1.1 Range Requests](http:
 
 Once you deploy the server on Heroku, you will see the video player in the middle of the page, and you should see the player buffering up with the trailer of Toy Story, which is included in this repo. Replace the movie with another one, but keep in mind that the format of the video must be compatible with what the video tag in your browser is capable of.
 
-# Other
+# The End
 
 If you've enjoyed this article/project, please consider giving it a 🌟. Also check out my [GitHub account] (https://github.com/davidgatti), where I have other articles and apps that you might find interesting.
 
