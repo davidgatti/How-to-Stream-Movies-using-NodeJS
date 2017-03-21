@@ -1,6 +1,6 @@
 # How to Stream a Movie to a HTML 5 video tag using NodeJS
 
-This is a very quick and easy article explaining how to stream movies to an HTML 5 video tag using NodeJS. The whole project is very small and compact. Focus your attention on the `movie.js` file in the routes folder.
+This is a very quick and easy article explaining how to stream movies to an HTML 5 video tag using NodeJS. The whole project is very small and compact. Focus your attention on the `video.js` file in the routes folder.
 
 # But first, what are streams?
 
