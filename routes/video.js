@@ -1,7 +1,7 @@
 'use strict';
 
-let fs = require("fs")
-let path = require("path");
+let fs = require('fs')
+let path = require('path');
 let express = require('express');
 
 let router = express.Router();
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 	//
 	//	1.	Path to the movie to stream
 	//
-	let file = "./public/toystory.mp4";
+	let file = './public/toystory.mp4';
 
 	//
 	//	2.	Get meta information from the file. In this case we are interested
@@ -64,7 +64,7 @@ router.get('/', function(req, res, next) {
 			//
 			// 	1.	Create the error
 			//
-			let err = new Error("Wrong range");
+			let err = new Error('Wrong range');
 				err.status = 416;
 
 			//
@@ -76,7 +76,7 @@ router.get('/', function(req, res, next) {
 		//
 		//	4.	Convert the string range in to an array for easy use.
 		//
-		let positions = range.replace(/bytes=/, "").split("-");
+		let positions = range.replace(/bytes=/, '').split('-');
 
 		//
 		//	5.	Convert the start value in to an integer
@@ -108,10 +108,10 @@ router.get('/', function(req, res, next) {
 		//		receiving.
 		//
 		let head = {
-			"Content-Range": "bytes " + start + "-" + end + "/" + file_size,
-			"Accept-Ranges": "bytes",
-			"Content-Length": chunksize,
-			"Content-Type": "video/mp4"
+			'Content-Range': 'bytes ' + start + '-' + end + '/' + file_size,
+			'Accept-Ranges': 'bytes',
+			'Content-Length': chunksize,
+			'Content-Type': 'video/mp4'
 		}
 
 		//
@@ -137,7 +137,7 @@ router.get('/', function(req, res, next) {
 		//	13.	Once the stream is open, we pipe the data through the response
 		//		object.
 		//
-		stream.on("open", function() {
+		stream.on('open', function() {
 
 			stream.pipe(res);
 
@@ -147,7 +147,7 @@ router.get('/', function(req, res, next) {
 		//	->	If there was an error while opening a stream we stop the
 		//		request and display it.
 		//
-		stream.on("error", function(err) {
+		stream.on('error', function(err) {
 
 			return next(err);
 
