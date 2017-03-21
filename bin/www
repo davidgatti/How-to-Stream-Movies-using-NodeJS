@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-let app = require('../app');
-let http = require('http');
+let app     = require('../app');
+let http    = require('http');
 let cluster = require('cluster');
 
 let server;

@@ -1,11 +1,11 @@
 'use strict';
 
-let express = require('express');
+const express = require('express');
 
-let router = express.Router();
+const router  = express.Router();
 
 router.get('/', function(req, res, next) {
-
+	
 	//
 	//	->	Display the index view with the video tag
 	//

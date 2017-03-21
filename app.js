@@ -1,11 +1,11 @@
 'use strict';
 
-let path = require('path');
-let logger = require('morgan');
-let express = require('express');
-let bodyParser = require('body-parser');
+const path       = require('path');
+const logger     = require('morgan');
+const express    = require('express');
+const bodyParser = require('body-parser');
 
-let app = express();
+const app        = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');

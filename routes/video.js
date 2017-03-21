@@ -1,10 +1,10 @@
 'use strict';
 
-let fs = require('fs')
-let path = require('path');
-let express = require('express');
+const fs      = require('fs')
+const path    = require('path');
+const express = require('express');
 
-let router = express.Router();
+const router  = express.Router();
 
 //
 //	Stream the video
