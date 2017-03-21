@@ -9,7 +9,7 @@ const router  = express.Router();
 //
 //	Stream the video
 //
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
 
 	//
 	//	1.	Path to the movie to stream
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 	//	2.	Get meta information from the file. In this case we are interested
 	//		in its size.
 	//
-	fs.stat(file, function(err, stats) {
+	fs.stat(file, (err, stats) => {
 
 		//
 		//	1.	If there was an error reading the file stats we inform the
@@ -137,21 +137,13 @@ router.get('/', function(req, res, next) {
 		//	13.	Once the stream is open, we pipe the data through the response
 		//		object.
 		//
-		stream.on('open', function() {
-
-			stream.pipe(res);
-
-		})
+		stream.on('open', () => stream.pipe(res))
 
 		//
 		//	->	If there was an error while opening a stream we stop the
 		//		request and display it.
 		//
-		stream.on('error', function(err) {
-
-			return next(err);
-
-		});
+		stream.on('error', err => next(err));
 
 	});
 

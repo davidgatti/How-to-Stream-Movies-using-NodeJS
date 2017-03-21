@@ -52,7 +52,7 @@ app.use('/video', require('./routes/video'));
 //  If nonce of the above routes matches, we create an error to let the
 //  user know that the URL accessed doesn't match anything.
 //
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
 
 	let err = new Error('Not Found');
 		err.status = 404;
@@ -64,7 +64,7 @@ app.use(function(req, res, next) {
 //
 //  Display any error that occurred during the request.
 //
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
 
 	//
 	//	1.	Set the basic information about the error, that is going to be
