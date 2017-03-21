@@ -1,13 +1,15 @@
-let express = require('express');
+'use strict';
 
-let router = express.Router();
+const express = require('express');
 
-router.get('/', function(req, res, next) {
+const router  = express.Router();
+
+router.get('/', (req, res, next) => {
 
 	//
 	//	->	Display the index view with the video tag
 	//
-	res.render("index", {
+	res.render('index', {
 		base_url: process.env.BASE_URL
 	});
 
