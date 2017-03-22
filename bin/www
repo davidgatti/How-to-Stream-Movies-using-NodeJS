@@ -148,5 +148,5 @@ function onListening() {
 	//
 	//	-> display in the console where to look for the server
 	//
-	console.log("Worker %d is listening on port %d", cluster.worker.id, port);
+	console.log('Worker %d is listening on port %d', cluster.worker.id, port);
 }

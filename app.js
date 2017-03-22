@@ -1,9 +1,9 @@
-let path = require('path');
-let logger = require('morgan');
-let express = require('express');
+let path       = require('path');
+let logger     = require('morgan');
+let express    = require('express');
 let bodyParser = require('body-parser');
 
-let app = express();
+let app        = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
