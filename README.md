@@ -8,7 +8,7 @@ If you never dealt with streams, you might think to yourself, why not just link 
 
 Well, imagine that you have 16GB of RAM on the server, but you have a 20GB video file on the drive. What now? How would you load such a massive file that exceeds the RAM capacity? Streams are the answer 😎.
 
-With streams, you have your file on disk, sitting there and having a good time. By using the `[.createReadStream()](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)` method, and telling it which part of the file you're interested in, you will just get a chunk of the whole thing. For example, just 1MB. Then you take that 1MB, send it to whoever requested it, and you're done.
+With streams, you have your file on disk, sitting there and having a good time. By using the [.createReadStream()](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options) method, and telling it which part of the file you're interested in, you will just get a chunk of the whole thing. For example, just 1MB. Then you take that 1MB, send it to whoever requested it, and you're done.
 
 If you are interested in learninig more about Streams, check out this other article that I wrote, titled: [How-to-Understand-Streams-in-NodeJS](https://github.com/davidgatti/How-to-Understand-Streams-in-NodeJS).
 
