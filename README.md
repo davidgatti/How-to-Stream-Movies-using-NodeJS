@@ -1,3 +1,14 @@
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+
+[github-watch-badge]: https://img.shields.io/github/watchers/davidgatti/How-to-Stream-Movies-using-NodeJS.svg?style=social
+[github-watch]: https://github.com/davidgatti/How-to-Stream-Movies-using-NodeJS/watchers
+
+[github-star-badge]: https://img.shields.io/github/stars/davidgatti/How-to-Stream-Movies-using-NodeJS.svg?style=social
+[github-star]: https://github.com/davidgatti/How-to-Stream-Movies-using-NodeJS/stargazers
+
+---
+
 # How to Stream a Movie to a HTML 5 video tag using NodeJS
 
 This is a very quick and easy **article** explaining how to stream movies to an HTML 5 video tag using NodeJS. The whole project is very small and compact. The `video.js` file is where you shoud focus your attention. The file is in the `routes` folder.
