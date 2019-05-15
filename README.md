@@ -36,31 +36,8 @@ Once you deploy the server on Heroku, you will see the video player in the middl
 
 # The End
 
-If you've enjoyed this article/project, please consider giving it a 🌟 or donate.
+If you enjoyed this project, please consider giving it a 🌟. And check out our [0x4447 GitHub account](https://github.com/0x4447), where you'll find additional resources you might find useful or interesting.
 
-- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/gattidavid/25)
-- [![Star on GitHub](https://img.shields.io/github/stars/davidgatti/How-to-Stream-Movies-using-NodeJS.svg?style=social)](https://github.com/davidgatti/How-to-Stream-Movies-using-NodeJS/stargazers)
-- [![Watch on GitHub](https://img.shields.io/github/watchers/davidgatti/How-to-Stream-Movies-using-NodeJS.svg?style=social)](https://github.com/davidgatti/How-to-Stream-Movies-using-NodeJS/watchers)
+## Sponsor 🎊
 
-Also check out my [GitHub account](https://github.com/davidgatti), where I have other articles and apps that you might find interesting.
-
-## For Hire 👨‍💻
-
-If you'd like me to help you, I'm available for hire. Contact me at job@gatti.pl.
-
-## Where to follow
-
-You can follow me on social media 🐙😇, at the following locations:
-
-- [GitHub](https://github.com/davidgatti)
-- [Twitter](https://twitter.com/dawidgatti)
-- [Instagram](https://www.instagram.com/gattidavid/)
-
-## More about me
-
-I don’t only live on GitHub, I try to do many things not to get bored 🙃. To learn more about me, you can visit the following links:
-
-- [Podcasts](http://david.gatti.pl/podcasts)
-- [Technical Articles](http://david.gatti.pl/technical_articles)
-- [Software Projects](http://david.gatti.pl/software_projects)
-- [Hardware Projects](http://david.gatti.pl/hardware_projects)
+This project is brought to you by 0x4447 LLC, a software company specializing in building custom solutions on top of AWS. Follow this link to learn more: https://0x4447.com. Alternatively, send an email to [hello@0x4447.email](mailto:hello@0x4447.email?Subject=Hello%20From%20Repo&Body=Hi%2C%0A%0AMy%20name%20is%20NAME%2C%20and%20I%27d%20like%20to%20get%20in%20touch%20with%20someone%20at%200x4447.%0A%0AI%27d%20like%20to%20discuss%20the%20following%20topics%3A%0A%0A-%20LIST_OF_TOPICS_TO_DISCUSS%0A%0ASome%20useful%20information%3A%0A%0A-%20My%20full%20name%20is%3A%20FIRST_NAME%20LAST_NAME%0A-%20My%20time%20zone%20is%3A%20TIME_ZONE%0A-%20My%20working%20hours%20are%20from%3A%20TIME%20till%20TIME%0A-%20My%20company%20name%20is%3A%20COMPANY%20NAME%0A-%20My%20company%20website%20is%3A%20https%3A%2F%2F%0A%0ABest%20regards.).
